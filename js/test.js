@@ -1,3 +1,13 @@
+
+// list of personality types
+const personalities = [
+    "personality1",
+    "personality2",
+    "personality3",
+    // ...
+]
+
+// test questions
 const questions = [
     {
         "question": "question1",

@@ -1,10 +1,5 @@
 
-var results = {
-    // tally for personality results
-    "personality1": 0,
-    "personality2": 0,
-    // ...
-}
+var results = {}
 
 var question_index = 0;
 var total_questions = questions.length;
@@ -18,6 +13,7 @@ function startTest() {
     populateTest();
 }
 
+// populate test questions/choices
 function populateTest() {
     const question = questions[question_index];
 
@@ -25,7 +21,7 @@ function populateTest() {
     question_text.innerText = question.question;
 
     const image = document.getElementById("story-image");
-    image.setAttribute("src", "img/")
+    image.setAttribute("src", "img/story/" + question_index.toString() + ".png");
 
     const choices_container = document.getElementById("choices");
     choices_container.innerHTML = '';
@@ -40,7 +36,12 @@ function populateTest() {
     }
 }
 
+// add to results tally, pull up next question
 function submitChoice(mapping) {
+    if (!results[mapping]) {
+        results[mapping] = 0;
+    }
+
     results[mapping] += 1;
     question_index++;
 
@@ -54,6 +55,7 @@ function submitChoice(mapping) {
     populateTest()
 }
 
+// calculate results, show corresponding profile
 function showResults() {
     var result = "";
 
@@ -67,12 +69,25 @@ function showResults() {
         }
     }
     
-    const img_id = "img/".concat(result, ".png");
+    const img_id = "img/profiles/" + result + ".png";
 
     const resultsPage = document.getElementById("results");
     const personality = document.getElementById("personality");
     resultsPage.removeAttribute("hidden");
     const text = document.getElementById("results-text");
     personality.setAttribute("src", img_id);
-    text.innerText = "you are ".concat(result, "!");
+    text.innerText = "you are " + result + "!";
+}
+
+// clear results, hide results page, start test
+function reset() {
+    question_index = 0;
+
+    for (const key in results) {
+        results[key] = 0;
+    }
+
+    const resultsPage = document.getElementById("results");
+    resultsPage.setAttribute("hidden", "true");
+    startTest();
 }

@@ -2,23 +2,59 @@ body {
     font-family: monospace;
     text-align: center;
     padding-top: 30px;
+    background-color: rgb(209, 249, 183);
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    text-align: center;
+    color: rgb(27, 160, 27);
+}
+
+img {
+    max-width: 100%;
+    max-height: 500px;
+    height: 50%;
 }
 
 button {
     border: none;
     padding: 15px;
-    background-color: limegreen;
+    background-color: rgb(58, 200, 72);
     font-family: monospace;
     color: white;
     border-radius: 20px;
 }
 
+button:hover {
+    background-color: rgb(27, 160, 27);
+}
+
+
+/* test page */
+
 #choices {
-    width: 300px;
+    width: 50%;
+    min-width: 300px;
     margin: auto;
 }
 
 .choice {
     width: 100%;
     margin: 10px;
+}
+
+
+/* results page */
+#results img {
+    padding: 10px 0px;
+}
+
+
+/* profiles page */
+.profile img {
+    max-height: 300px;
 }

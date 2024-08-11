@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
-    <script type = "text/javascript" src="questions.js"></script>
-    <script type = "text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = "text/javascript" src="js/test.js"></script>
+    <script type = "text/javascript" src="js/index.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>what vehicle r u?</title>
 </head>
@@ -9,13 +10,14 @@
 <body>
     <!-- start page -->
      <div id="start">
-         <h1>what vehicle are you?</h1>
-         <button onclick="startTest()">let's find out!</button>
+        <img src="img/start.png" alt="landing page image">
+        <h1>what vehicle are you?</h1>
+        <button onclick="startTest()">let's find out!</button>
      </div>
 
     <!-- test question page -->
      <div id="test" hidden>
-        <img id="story-image" src="" alt="">
+        <img id="story-image">
         <p id="question"></p>
         <div id="choices"></div>
      </div>
@@ -23,6 +25,15 @@
      <!-- results page -->
       <div id="results" hidden>
         <p id="results-text"></p>
-        <img id="personality" src="" alt="">
+        <img id="personality">
+        <div>
+            <button onclick="reset()">again!</button>
+            <br>
+            <p><a href="profiles.html">see all personality types!</a></p>
+        </div>
       </div>
 </body>
+
+<footer>
+    <p>made by elaine, anna, tanya, sydney (EATS)</p>
+</footer>
