@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <script type = "text/javascript" src="questions.js"></script>
+    <script type = "text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>what vehicle r u?</title>
+</head>
+
+<body>
+    <!-- start page -->
+     <div id="start">
+         <h1>what vehicle are you?</h1>
+         <button onclick="startTest()">let's find out!</button>
+     </div>
+
+    <!-- test question page -->
+     <div id="test" hidden>
+        <img id="story-image" src="" alt="">
+        <p id="question"></p>
+        <div id="choices"></div>
+     </div>
+
+     <!-- results page -->
+      <div id="results" hidden>
+        <p id="results-text"></p>
+        <img id="personality" src="" alt="">
+      </div>
+</body>

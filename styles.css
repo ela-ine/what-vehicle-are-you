@@ -1,0 +1,24 @@
+body {
+    font-family: monospace;
+    text-align: center;
+    padding-top: 30px;
+}
+
+button {
+    border: none;
+    padding: 15px;
+    background-color: limegreen;
+    font-family: monospace;
+    color: white;
+    border-radius: 20px;
+}
+
+#choices {
+    width: 300px;
+    margin: auto;
+}
+
+.choice {
+    width: 100%;
+    margin: 10px;
+}
