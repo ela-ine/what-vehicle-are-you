@@ -1,39 +1,44 @@
 <!DOCTYPE html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type = "text/javascript" src="js/test.js"></script>
-    <script type = "text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/truck.png">
     <title>what vehicle r u?</title>
 </head>
 
 <body>
+    <a class="home-icon" href="index.html"><img src="img/truck.png" alt="go to home page"></a>
     <!-- start page -->
-     <div id="start">
+    <div id="start">
         <img src="img/start.png" alt="landing page image">
-        <h1>what vehicle are you?</h1>
-        <button onclick="startTest()">let's find out!</button>
-     </div>
+        <div class="menu">
+            <h1>what vehicle are you?</h1>
+            <button onclick="startTest()">let's find out!</button>
+        </div>
+    </div>
 
     <!-- test question page -->
-     <div id="test" hidden>
+    <div id="test" hidden>
         <img id="story-image">
         <p id="question"></p>
         <div id="choices"></div>
-     </div>
+    </div>
 
-     <!-- results page -->
-      <div id="results" hidden>
+    <!-- results page -->
+    <div id="results" hidden>
         <p id="results-text"></p>
         <img id="personality">
-        <div>
-            <button onclick="reset()">again!</button>
-            <br>
-            <p><a href="profiles.html">see all personality types!</a></p>
+        <p>credits: 👾 elaine 🎨 tanya, elaine 🖋️ anna, sydney</p>
+        <div class="menu">
+            <div class="button"><a href="profiles.html">see all personality types!</a></div>
+            <button onclick="reset()">again >:)</button>
         </div>
-      </div>
+    </div>
 </body>
 
-<footer>
+<footer class="footer">
     <p>made by elaine, anna, tanya, sydney (EATS)</p>
 </footer>

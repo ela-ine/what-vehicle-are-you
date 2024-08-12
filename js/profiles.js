@@ -3,6 +3,7 @@ window.onload = () => {
     loadProfiles();
 }
 
+// goes through array of personalities in test.js and loads images
 function loadProfiles(element) {
     personalities.forEach(personality => {
         const profile_container = document.createElement("div");
