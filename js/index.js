@@ -2,7 +2,7 @@
 var results = {}
 
 var question_index = 0;
-var total_questions = questions.length;
+var total_questions = Object.keys(questions).length;
 
 // when user hits start button -> start test
 function startTest() {
@@ -18,34 +18,39 @@ function populateTest() {
     const question = questions[question_index];
 
     const question_text = document.getElementById("question");
-    question_text.innerText = question.question;
+    question_text.innerHTML = question.question;
 
     const image = document.getElementById("story-image");
     image.setAttribute("src", "img/story/" + question_index.toString() + ".png");
 
     const choices_container = document.getElementById("choices");
-    choices_container.innerHTML = '';
+    choices_container.innerHTML = "";
 
     for (let i = 0; i < question.choices.length; i++) {
         const choice = question.choices[i];
         const choice_button = document.createElement("button");
-        choice_button.innerText = choice["choice"];
+        choice_button.innerHTML = choice["choice"];
         choice_button.setAttribute("class", "choice");
-        choice_button.onclick = function() { submitChoice(choice["mapping"]) };
+        choice_button.onclick = function() { submitChoice(choice) };
         choices_container.appendChild(choice_button);
     }
 }
 
 // add to results tally, pull up next question
-function submitChoice(mapping) {
+function submitChoice(choice) {
+    const mapping = choice["mapping"]
     if (!results[mapping]) {
         results[mapping] = 0;
     }
 
     results[mapping] += 1;
-    question_index++;
+    if ("next" in choice) {
+        question_index = choice["next"]
+    } else {
+        question_index++;
+    }
 
-    if (question_index == total_questions) {
+    if (!(question_index in questions)) {
         const testPage = document.getElementById("test");
         testPage.setAttribute("hidden", true);
         showResults();
