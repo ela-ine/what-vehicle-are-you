@@ -1,5 +1,14 @@
 
-var results = {}
+var results = {
+    "i": 0,
+    "e": 0,
+    "f": 0,
+    "t": 0,
+    "n": 0,
+    "s": 0,
+    "p": 0,
+    "j": 0
+}
 
 var question_index = 0;
 var total_questions = Object.keys(questions).length;
@@ -38,12 +47,16 @@ function populateTest() {
 
 // add to results tally, pull up next question
 function submitChoice(choice) {
-    const mapping = choice["mapping"]
-    if (!results[mapping]) {
-        results[mapping] = 0;
-    }
+    const mapping = choice["mapping"];
 
-    results[mapping] += 1;
+    for (const char of mapping) {
+        if (!results[mapping]) {
+            results[mapping] = 0;
+        }
+    
+        results[mapping] += 1;
+    }
+    
     if ("next" in choice) {
         question_index = choice["next"]
     } else {
@@ -60,20 +73,21 @@ function submitChoice(choice) {
     populateTest()
 }
 
-// calculate results, show corresponding profile
-function showResults() {
-    var result = "";
-
-    for (const key in results) {
-        if (!result) {
-            result = key;
-        }
-
-        if (results[key] > results[result]) {
-            result = key;
-        }
-    }
+// calculate results
+function calculateResults() {
+    console.log(results);
+    var result = 
+        (results["i"] > results["e"] ? "i" : "e") +
+        (results["n"] > results["s"] ? "n" : "s") +
+        (results["t"] > results["f"] ? "t" : "f") +
+        (results["p"] > results["j"] ? "p" : "j");
     
+    return result;
+}
+
+// show corresponding profile to result
+function showResults() {
+    var result = calculateResults();
     const img_id = "img/profiles/" + result + ".png";
 
     const resultsPage = document.getElementById("results");
@@ -81,7 +95,7 @@ function showResults() {
     resultsPage.removeAttribute("hidden");
     const text = document.getElementById("results-text");
     personality.setAttribute("src", img_id);
-    text.innerText = "you are " + result + "!";
+    text.innerText = "you are " + personalities[result] + "!";
 }
 
 // clear results, hide results page, start test
