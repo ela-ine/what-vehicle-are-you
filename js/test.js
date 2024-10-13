@@ -312,7 +312,7 @@ const questions = {
                 "mapping": "s"
             },
             {
-                "choice": "you give them a copy of karl marx's communist manifesto — the t-rex leaves to start a socialist uprising",
+                "choice": "you give them a copy of karl marx's communist manifesto — the t-rex starts a socialist uprising",
                 "mapping": "n"
             },
             {
