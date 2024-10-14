@@ -109,7 +109,7 @@ function logResults(result) {
             result: personalities[result],
             results: results.toString(),
             path: path.toString(),
-            "debug_mode": true
+            debug_mode: true
         },
     }
 
