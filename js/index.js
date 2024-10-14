@@ -13,6 +13,13 @@ var results = {
 var question_index = 0;
 var total_questions = Object.keys(questions).length;
 
+// google analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-8LLQ3459GG');
+
 // when user hits start button -> start test
 function startTest() {
     const startPage = document.getElementById("start");
@@ -56,7 +63,7 @@ function submitChoice(choice) {
     
         results[mapping] += 1;
     }
-    
+
     if ("next" in choice) {
         question_index = choice["next"]
     } else {
