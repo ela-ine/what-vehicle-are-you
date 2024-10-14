@@ -1,31 +1,38 @@
 
 var results = {
-    "i": 0,
-    "e": 0,
-    "f": 0,
-    "t": 0,
-    "n": 0,
-    "s": 0,
-    "p": 0,
-    "j": 0
+    'i': 0,
+    'e': 0,
+    'f': 0,
+    't': 0,
+    'n': 0,
+    's': 0,
+    'p': 0,
+    'j': 0
 }
 
+var path = [];
 var question_index = 0;
 var total_questions = Object.keys(questions).length;
 
 // google analytics
+const measurement_id = `G-8LLQ3459GG`;
+const secret = 'VEYF9Uh3RoqKFT0fkXcWiQ';
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+gtag('config', measurement_id);
 
-gtag('config', 'G-8LLQ3459GG');
+var client_id = ''
+gtag('get', measurement_id, 'client_id', (id) => {
+    client_id = id;
+});
 
 // when user hits start button -> start test
 function startTest() {
-    const startPage = document.getElementById("start");
-    const testPage = document.getElementById("test");
-    startPage.setAttribute("hidden", true);
-    testPage.removeAttribute("hidden");
+    const startPage = document.getElementById('start');
+    const testPage = document.getElementById('test');
+    startPage.setAttribute('hidden', true);
+    testPage.removeAttribute('hidden');
     populateTest();
 }
 
@@ -33,20 +40,20 @@ function startTest() {
 function populateTest() {
     const question = questions[question_index];
 
-    const question_text = document.getElementById("question");
+    const question_text = document.getElementById('question');
     question_text.innerHTML = question.question;
 
-    const image = document.getElementById("story-image");
-    image.setAttribute("src", "img/story/" + question_index.toString() + ".png");
+    const image = document.getElementById('story-image');
+    image.setAttribute('src', 'img/story/' + question_index.toString() + '.png');
 
-    const choices_container = document.getElementById("choices");
-    choices_container.innerHTML = "";
+    const choices_container = document.getElementById('choices');
+    choices_container.innerHTML = '';
 
     for (let i = 0; i < question.choices.length; i++) {
         const choice = question.choices[i];
-        const choice_button = document.createElement("button");
-        choice_button.innerHTML = choice["choice"];
-        choice_button.setAttribute("class", "choice");
+        const choice_button = document.createElement('button');
+        choice_button.innerHTML = choice['choice'];
+        choice_button.setAttribute('class', 'choice');
         choice_button.onclick = function() { submitChoice(choice) };
         choices_container.appendChild(choice_button);
     }
@@ -54,7 +61,8 @@ function populateTest() {
 
 // add to results tally, pull up next question
 function submitChoice(choice) {
-    const mapping = choice["mapping"];
+    path.push(choice);
+    const mapping = choice['mapping'];
 
     for (const char of mapping) {
         if (!results[mapping]) {
@@ -64,15 +72,15 @@ function submitChoice(choice) {
         results[mapping] += 1;
     }
 
-    if ("next" in choice) {
-        question_index = choice["next"]
+    if ('next' in choice) {
+        question_index = choice['next']
     } else {
         question_index++;
     }
 
     if (!(question_index in questions)) {
-        const testPage = document.getElementById("test");
-        testPage.setAttribute("hidden", true);
+        const testPage = document.getElementById('test');
+        testPage.setAttribute('hidden', true);
         showResults();
         return;
     }
@@ -84,25 +92,45 @@ function submitChoice(choice) {
 function calculateResults() {
     console.log(results);
     var result = 
-        (results["i"] > results["e"] ? "i" : "e") +
-        (results["n"] > results["s"] ? "n" : "s") +
-        (results["t"] > results["f"] ? "t" : "f") +
-        (results["p"] > results["j"] ? "p" : "j");
+        (results['i'] > results['e'] ? 'i' : 'e') +
+        (results['n'] > results['s'] ? 'n' : 's') +
+        (results['t'] > results['f'] ? 't' : 'f') +
+        (results['p'] > results['j'] ? 'p' : 'j');
     
     return result;
+}
+
+function logResults(result) {
+    fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${secret}`, {
+        method: "POST",
+        body: JSON.stringify({
+            client_id: client_id,
+            events: [{
+            name: 'personality_result',
+            params: {
+                mbti: result,
+                result: personalities[result],
+                results: results,
+                path: path,
+            },
+            }]
+        })
+    });
+    console.log('here');
 }
 
 // show corresponding profile to result
 function showResults() {
     var result = calculateResults();
-    const img_id = "img/profiles/" + result + ".png";
+    const img_id = 'img/profiles/' + result + '.png';
 
-    const resultsPage = document.getElementById("results");
-    const personality = document.getElementById("personality");
-    resultsPage.removeAttribute("hidden");
-    const text = document.getElementById("results-text");
-    personality.setAttribute("src", img_id);
-    text.innerText = "you are " + personalities[result] + "!";
+    const resultsPage = document.getElementById('results');
+    const personality = document.getElementById('personality');
+    resultsPage.removeAttribute('hidden');
+    const text = document.getElementById('results-text');
+    personality.setAttribute('src', img_id);
+    text.innerText = 'you are ' + personalities[result] + '!';
+    logResults(result);
 }
 
 // clear results, hide results page, start test
@@ -113,7 +141,7 @@ function reset() {
         results[key] = 0;
     }
 
-    const resultsPage = document.getElementById("results");
-    resultsPage.setAttribute("hidden", "true");
+    const resultsPage = document.getElementById('results');
+    resultsPage.setAttribute('hidden', 'true');
     startTest();
 }
