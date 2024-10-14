@@ -22,7 +22,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', measurement_id);
 
-var client_id = ''
+var client_id = 'GA1.1.1749505231.1728876727'
 gtag('get', measurement_id, 'client_id', (id) => {
     client_id = id;
 });
@@ -100,20 +100,25 @@ function calculateResults() {
     return result;
 }
 
+// log results to google analytics
 function logResults(result) {
+    const event = {
+        name: 'personality_result',
+        params: {
+            mbti: result,
+            result: personalities[result],
+            results: results.toString(),
+            path: path.toString(),
+            "debug_mode": true
+        },
+    }
+
+    // send logs
     fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${secret}`, {
         method: "POST",
         body: JSON.stringify({
             client_id: client_id,
-            events: [{
-            name: 'personality_result',
-            params: {
-                mbti: result,
-                result: personalities[result],
-                results: results,
-                path: path,
-            },
-            }]
+            events: [ event ]
         })
     });
     console.log('here');
