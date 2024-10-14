@@ -61,7 +61,7 @@ function populateTest() {
 
 // add to results tally, pull up next question
 function submitChoice(choice) {
-    path.push(choice);
+    path.push(JSON.stringify(choice));
     const mapping = choice['mapping'];
 
     for (const char of mapping) {
@@ -107,7 +107,7 @@ function logResults(result) {
         params: {
             mbti: result,
             result: personalities[result],
-            results: results.toString(),
+            results: JSON.stringify(results),
             path: path.toString(),
             debug_mode: true
         },
