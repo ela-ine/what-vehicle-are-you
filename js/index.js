@@ -22,7 +22,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', measurement_id);
 
-var client_id = 'GA1.1.1749505231.1728876727'
+var client_id = 'GA1.1.1749505231.1728876727' // default for testing purposes
 gtag('get', measurement_id, 'client_id', (id) => {
     client_id = id;
 });
@@ -121,7 +121,6 @@ function logResults(result) {
             events: [ event ]
         })
     });
-    console.log('here');
 }
 
 // show corresponding profile to result
