@@ -3,6 +3,12 @@ window.onload = () => {
     loadProfiles();
 }
 
+const measurement_id = `G-8LLQ3459GG`;
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', measurement_id);
+
 // goes through array of personalities in test.js and loads images
 function loadProfiles(element) {
     const mbti = Object.keys(personalities);

@@ -51,11 +51,11 @@ const questions = {
             },
             {
                 "choice": "think about all the embarrassing things you've ever done and slowly die from cringe",
-                "mapping": "n"
+                "mapping": "s"
             },
             {
                 "choice": "watch your favorite asmr video: \"boyfriend tucks you into bed before dropping 15 metal pipes\"",
-                "mapping": "s"
+                "mapping": "n"
             },
             {
                 "choice": "talk to the people sitting next to you — why do all the people coming out of the driving test look so frazzled?",
