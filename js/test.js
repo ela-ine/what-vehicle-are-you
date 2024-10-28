@@ -47,15 +47,15 @@ const questions = {
         "choices": [
             {
                 "choice": "dissociate",
-                "mapping": "n"
+                "mapping": "ni"
             },
             {
                 "choice": "think about all the embarrassing things you've ever done and slowly die from cringe",
-                "mapping": "s"
+                "mapping": "si"
             },
             {
                 "choice": "watch your favorite asmr video: \"boyfriend tucks you into bed before dropping 15 metal pipes\"",
-                "mapping": "n"
+                "mapping": "ne"
             },
             {
                 "choice": "talk to the people sitting next to you — why do all the people coming out of the driving test look so frazzled?",
@@ -68,11 +68,11 @@ const questions = {
         "choices": [
             {
                 "choice": "that's literally impossible, you have 10 extra copies in your bag!",
-                "mapping": "j"
+                "mapping": "js"
             },
             {
                 "choice": "try to charm the dmv lady into letting you off the hook (she seems unamused)",
-                "mapping": "pe"
+                "mapping": "jf"
             },
             {
                 "choice": "beg the dmv lady for mercy and hope she doesn't smite you on the spot",
@@ -80,7 +80,7 @@ const questions = {
             },
             {
                 "choice": "call your mom and sheepishly ask her to deliver your documents",
-                "mapping": "j"
+                "mapping": "p"
             }
         ]
     },
@@ -89,7 +89,7 @@ const questions = {
         "choices": [
             {
                 "choice": "have studied your whole life in preparation for this exact moment. you execute the arm signals flawlessly. the examiner is in awe",
-                "mapping": "j"
+                "mapping": "js"
             },
             {
                 "choice": "freak out because what arm signals??? the examiner takes pity on you and teaches them to you",
@@ -101,7 +101,7 @@ const questions = {
             },
             {
                 "choice": "flail your arms about, performing an interpretive dance. the examiner is impressed by your dancing skills",
-                "mapping": "p"
+                "mapping": "pe"
             }
         ]
     },
@@ -114,7 +114,7 @@ const questions = {
             },
             {
                 "choice": "put on some music — maybe the examiner will like k-pop?",
-                "mapping": "i"
+                "mapping": "ep"
             },
             {
                 "choice": "stay quiet and enjoy the shared silence",
@@ -122,7 +122,7 @@ const questions = {
             },
             {
                 "choice": "start spiraling internally and convince yourself that the examiner hates you",
-                "mapping": "e"
+                "mapping": "in"
             }
         ]
     },
@@ -140,11 +140,11 @@ const questions = {
             },
             {
                 "choice": "although the portal looks scary, the examiner is scarier… you take a right",
-                "mapping": "s"
+                "mapping": "sp"
             },
             {
                 "choice": "after telling the examiner you have a diagnosed phobia of otherworldly portals, they let you take a left",
-                "mapping": "n",
+                "mapping": "nj",
                 "next": "9"
             }
         ]
@@ -156,19 +156,19 @@ const questions = {
         "choices": [
             {
                 "choice": "nah… you step on the gas and skirt around the troll. he shakes his fist angrily at you in the rearview mirror",
-                "mapping": "i"
+                "mapping": "t"
             },
             {
                 "choice": "chatting with the troll, you find out he's totally getting underpaid! the troll takes your advice and joins a union",
-                "mapping": "e"
+                "mapping": "f"
             },
             {
                 "choice": "you make easy work of the riddle, then trade ideas and strategies with the troll — good luck to the next player!",
-                "mapping": "i"
+                "mapping": "t"
             },
             {
                 "choice": "you butter him up and bribe the troll with an iced coffee — delighted by the joy of a sweet treat and a compliment, he happily lets you pass",
-                "mapping": "e"
+                "mapping": "f"
             }
         ]
     },
@@ -177,19 +177,19 @@ const questions = {
         "choices": [
             {
                 "choice": "oh no! slow down and ask the dragon if it's ok",
-                "mapping": "f"
+                "mapping": "ef"
             },
             {
                 "choice": "that's none of your business — try to sneak past the dragon unnoticed",
-                "mapping": "t"
+                "mapping": "et"
             },
             {
                 "choice": "look around and try to figure out why — it's cloudy today, maybe seasonal depression?",
-                "mapping": "t"
+                "mapping": "it"
             },
             {
                 "choice": "a dragon??? make a u-turn and escape before it turns you into a s'more",
-                "mapping": "f"
+                "mapping": "if"
             }
         ]
     },
@@ -198,19 +198,19 @@ const questions = {
         "choices": [
             {
                 "choice": "provide some logical solutions: where did it last see the diamond? can it get another one? can it get *you* one?",
-                "mapping": "j"
+                "mapping": "je"
             },
             {
                 "choice": "dealing with sad people (or, creatures?) is not your forte — awkwardly try to offer it some snacks",
-                "mapping": "p"
+                "mapping": "pi"
             },
             {
                 "choice": "you get it, you're familiar with heartbreak — you commiserate together by listening to some sad music",
-                "mapping": "p"
+                "mapping": "pe"
             },
             {
                 "choice": "this is so killing your vibe, you roll your eyes and tell the dragon to get it together",
-                "mapping": "j"
+                "mapping": "ji"
             }
         ]
     },
@@ -267,19 +267,19 @@ const questions = {
         "choices": [
             {
                 "choice": "say yes because you're really bad at saying no :/",
-                "mapping": "p"
+                "mapping": "ip"
             },
             {
                 "choice": "decline apologetically - unfortunately, you're in the middle of a driving test :(",
-                "mapping": "j"
+                "mapping": "fj"
             },
             {
                 "choice": "don't pterodactyls fly???",
-                "mapping": "j"
+                "mapping": "tj"
             },
             {
                 "choice": "sure! the more the merrier!",
-                "mapping": "p"
+                "mapping": "ep"
             }
         ]
     },
@@ -292,7 +292,7 @@ const questions = {
             },
             {
                 "choice": "the t-rex clearly ran multiple red lights and stop signs — threaten the t-rex with their traffic violations and ask them to explain themself",
-                "mapping": "t"
+                "mapping": "et"
             },
             {
                 "choice": "your nosiness gets the best of you: grab some popcorn and watch them fight it out",
@@ -309,19 +309,19 @@ const questions = {
         "choices": [
             {
                 "choice": "you give them your most prized possession: your iced coffee… the t-rex is very pleased, they love a sweet treat!",
-                "mapping": "s"
+                "mapping": "fs"
             },
             {
                 "choice": "you give them a copy of karl marx's communist manifesto — the t-rex starts a socialist uprising",
-                "mapping": "n"
+                "mapping": "tn"
             },
             {
                 "choice": "you tell them your deepest darkest secret… the t-rex points at you and laughs",
-                "mapping": "n"
+                "mapping": "fn"
             },
             {
                 "choice": "you give them a little pink bow! the t-rex is delighted and feels very cute",
-                "mapping": "s"
+                "mapping": "ts"
             }
         ]
     },
@@ -353,19 +353,19 @@ const questions = {
         "choices": [
             {
                 "choice": "what just happened???",
-                "mapping": "i"
+                "mapping": "ni"
             },
             {
                 "choice": "nice! i'm never driving ever again!",
-                "mapping": "i"
+                "mapping": "si"
             },
             {
                 "choice": "thank god there was no parallel parking section",
-                "mapping": "e"
+                "mapping": "se"
             },
             {
                 "choice": "that was fun! can we go again?",
-                "mapping": "e"
+                "mapping": "ne"
             }
         ]
     },
@@ -374,19 +374,19 @@ const questions = {
         "choices": [
             {
                 "choice": "cheese!",
-                "mapping": "f"
+                "mapping": "if"
             },
             {
                 "choice": "i'm going to sue the dmv",
-                "mapping": "t"
+                "mapping": "et"
             },
             {
                 "choice": "wait let me touch up!",
-                "mapping": "f"
+                "mapping": "ef"
             },
             {
                 "choice": "please just get me out of here",
-                "mapping": "t"
+                "mapping": "it"
             }
         ]
     }
