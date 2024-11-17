@@ -215,7 +215,7 @@ const questions = {
         ]
     },
     "8": {
-        "question": "entering the castle, you look around — there's a witch's cauldron, a room full of secrets, and a dimly lit hallway. what do you do?",
+        "question": "entering the castle, you look around — there's a witch's cauldron, a room full of secrets, and a mysterious trap door. what do you do?",
         "choices": [
             {
                 "choice": "go into the room of secrets — you love gossip!",
@@ -233,7 +233,7 @@ const questions = {
                 "next": "13"
             },
             {
-                "choice": "go down the dimly lit hallway, maybe the dragon's diamond is there!",
+                "choice": "go down the trap door, maybe the dragon's diamond is there!",
                 "mapping": "n",
                 "next": "13"
             }
@@ -284,14 +284,14 @@ const questions = {
         ]
     },
     "11": {
-        "question": "before you can finish responding, you suddenly see a t-rex charging towards you, yelling at the pterodactyl! what do you do?",
+        "question": "before you can finish responding, you see a t-rex suddenly emerge from the house next door… what do you do?",
         "choices": [
             {
-                "choice": "you're too young to die — run!!!!",
+                "choice": "you're too young to die — RUN!!!!",
                 "mapping": "f"
             },
             {
-                "choice": "the t-rex clearly ran multiple red lights and stop signs — threaten the t-rex with their traffic violations and ask them to explain themself",
+                "choice": "the t-rex is clearly violating the HOA rules of this neighborhood, threaten to report them!",
                 "mapping": "et"
             },
             {
