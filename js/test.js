@@ -284,28 +284,7 @@ const questions = {
         ]
     },
     "11": {
-        "question": "before you can finish responding, you see a t-rex suddenly emerge from the house next door… what do you do?",
-        "choices": [
-            {
-                "choice": "you're too young to die — RUN!!!!",
-                "mapping": "f"
-            },
-            {
-                "choice": "the t-rex is clearly violating the HOA rules of this neighborhood, threaten to report them!",
-                "mapping": "et"
-            },
-            {
-                "choice": "your nosiness gets the best of you: grab some popcorn and watch them fight it out",
-                "mapping": "f"
-            },
-            {
-                "choice": "you didn't like the pterodactyl much anyway — surrender them and back away slowly from the situation",
-                "mapping": "t"
-            }
-        ]
-    },
-    "12": {
-        "question": "turns out the t-rex is a car mechanic! they offer to fix the pterodactyl's car, but only if you can give them something of equal value…",
+        "question": "you see a t-rex emerge from the house next door - turns out they're a car mechanic! they offer to fix the pterodactyl's car, but only if you can give them something of equal value…",
         "choices": [
             {
                 "choice": "you give them your most prized possession: your iced coffee… the t-rex is very pleased, they love a sweet treat!",
@@ -322,6 +301,27 @@ const questions = {
             {
                 "choice": "you give them a little pink bow! the t-rex is delighted and feels very cute",
                 "mapping": "ts"
+            }
+        ]
+    },
+    "12": {
+        "question": "the pterodactyl's car is fixed! they're so thankful that they offer you a reward - what do you choose?",
+        "choices": [
+            {
+                "choice": "a dinosaur egg — having a pet pterodactyl sounds cool!",
+                "mapping": "f"
+            },
+            {
+                "choice": "a signed contract for immunity against dinosaurs, you will NOT be getting eaten any time soon",
+                "mapping": "t"
+            },
+            {
+                "choice": "money :)",
+                "mapping": "t"
+            },
+            {
+                "choice": "a dinner with the pterodactyl where you can ask all your burning dinosaur questions!",
+                "mapping": "ef"
             }
         ]
     },
