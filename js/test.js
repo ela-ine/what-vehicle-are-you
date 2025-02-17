@@ -242,28 +242,28 @@ const questions = {
 
     // branch 2
     "9": {
-        "question": "you drive away from the portal, but you find yourself in a weird neighborhood… why is there a pterodactyl on the lawn? is it alive?",
+        "question": "you drive away from the portal, but you find yourself in a weird neighborhood… why is there a stegosaurus on the lawn? is it alive?",
         "choices": [
             {
                 "choice": "snap a picture of it — your 2 followers have to see this",
                 "mapping": "e"
             },
             {
-                "choice": "a pterodactyl??? step on the gas before you become its lunch",
+                "choice": "a STEGOSAURUS??? step on the gas before you become its lunch",
                 "mapping": "i"
             },
             {
-                "choice": "roll down your window and chat with the pterodactyl — what are the hoa fees like in this neighborhood?",
+                "choice": "roll down your window and chat with the stegosaurus — what are the hoa fees like in the neighborhood?",
                 "mapping": "e"
             },
             {
-                "choice": "that's none of your business - try to sneak past the pterodactyl unnoticed",
+                "choice": "it's probably just a strange lawn decoration... right..? right???",
                 "mapping": "i"
             }
         ]
     },
     "10": {
-        "question": "the pterodactyl says their car broke down! they ask if they can catch a ride with you…",
+        "question": "the stegosaurus says their car broke down! they ask if they can catch a ride with you…",
         "choices": [
             {
                 "choice": "say yes because you're really bad at saying no :/",
@@ -274,7 +274,7 @@ const questions = {
                 "mapping": "fj"
             },
             {
-                "choice": "don't pterodactyls fly???",
+                "choice": "is this stegosaurus even licensed??",
                 "mapping": "tj"
             },
             {
@@ -284,7 +284,7 @@ const questions = {
         ]
     },
     "11": {
-        "question": "you see a t-rex emerge from the house next door - turns out they're a car mechanic! they offer to fix the pterodactyl's car, but only if you can give them something of equal value…",
+        "question": "you see a t-rex emerge from the house next door - turns out they're a car mechanic! they offer to fix the stegosaurus's car, but only if you can give them something of equal value…",
         "choices": [
             {
                 "choice": "you give them your most prized possession: your iced coffee… the t-rex is very pleased, they love a sweet treat!",
@@ -305,10 +305,10 @@ const questions = {
         ]
     },
     "12": {
-        "question": "the pterodactyl's car is fixed! they're so thankful that they offer you a reward - what do you choose?",
+        "question": "the stegosaurus's car is fixed! they're so thankful that they offer you a reward - what do you choose?",
         "choices": [
             {
-                "choice": "a dinosaur egg — having a pet pterodactyl sounds cool!",
+                "choice": "a dinosaur egg — having a pet stegosaurus sounds cool!",
                 "mapping": "f"
             },
             {
@@ -320,7 +320,7 @@ const questions = {
                 "mapping": "t"
             },
             {
-                "choice": "a dinner with the pterodactyl where you can ask all your burning dinosaur questions!",
+                "choice": "a dinner with the stegosaurus where you can ask all your burning dinosaur questions!",
                 "mapping": "ef"
             }
         ]
