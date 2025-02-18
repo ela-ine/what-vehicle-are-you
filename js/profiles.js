@@ -26,7 +26,7 @@ function loadProfiles(element) {
         profile_container.appendChild(profile_img);
         profile_container.appendChild(profile_txt);
 
-        const profiles = document.getElementById("profiles");
-        profiles.appendChild(profile_container);
+        const gallery = document.getElementById("gallery");
+        gallery.appendChild(profile_container);
     });
 }
