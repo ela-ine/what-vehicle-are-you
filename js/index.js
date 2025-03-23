@@ -131,7 +131,7 @@ function logResults(result) {
 
 // show corresponding profile to result
 function showResults() {
-    var result = calculateResults();
+    var result = personalities[calculateResults()];
     const img_id = 'img/profiles/' + result + '.png';
 
     const resultsPage = document.getElementById('results');
@@ -139,7 +139,7 @@ function showResults() {
     resultsPage.removeAttribute('hidden');
     const text = document.getElementById('results-text');
     personality.setAttribute('src', img_id);
-    text.innerText = 'you are ' + personalities[result] + '!';
+    text.innerText = 'you are ' + result + '!';
     // logResults(result);
 }
 
