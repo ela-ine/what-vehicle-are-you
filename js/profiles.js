@@ -18,7 +18,7 @@ function loadProfiles(element) {
         profile_container.setAttribute("class", "profile");
 
         const profile_img = document.createElement("img");
-        profile_img.setAttribute("src", "img/profiles/" + vehicle + ".png");
+        profile_img.setAttribute("src", "img/profiles/" + vehicle + ".PNG");
         profile_img.setAttribute("alt", vehicle);
 
         const profile_txt = document.createElement("p");

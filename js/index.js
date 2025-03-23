@@ -132,7 +132,7 @@ function logResults(result) {
 // show corresponding profile to result
 function showResults() {
     var result = personalities[calculateResults()];
-    const img_id = 'img/profiles/' + result + '.png';
+    const img_id = 'img/profiles/' + result + '.PNG';
 
     const resultsPage = document.getElementById('results');
     const personality = document.getElementById('personality');
