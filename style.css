@@ -58,7 +58,7 @@ button:hover, .button:hover {
 /* start page */
 
 #start {
-    padding-top: 20px
+    padding-top: 20px;
 }
 
 /* test page */
@@ -95,15 +95,7 @@ button:hover, .button:hover {
 
 /* profiles page */
 
-#profiles {
-    /* background-color: white; */
-    /* background-color: #fb7160; */
-    background-color: #836aa1;
-    color: white;
-}
-
 #gallery {
-    max-width: 90%;
     margin: auto;
     padding-top: 20px;
 
@@ -120,5 +112,9 @@ button:hover, .button:hover {
 }
 
 .profile img {
-    max-height: 300px;
+    max-height: 500px;
+}
+
+.caption {
+    color: rgb(27, 160, 27);
 }

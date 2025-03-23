@@ -3,11 +3,11 @@
 const personalities =
 {
     "entj": "tank",
-    "enfj": "mysterious unmarked white van",
+    "enfj": "mysterious van",
     "esfj": "bus",
     "estj": "race car",
     "entp": "golf cart",
-    "enfp": "hot wheel",
+    "enfp": "hot wheels",
     "esfp": "pink convertible",
     "estp": "pickup truck",
     "intj": "cybertruck",
@@ -16,7 +16,7 @@ const personalities =
     "istj": "garbage truck",
     "intp": "zamboni",
     "infp": "banana cart",
-    "isfp": "horse drawn carriage",
+    "isfp": "carriage",
     "istp": "ambulance"
 }
 

@@ -16,16 +16,20 @@ var total_questions = Object.keys(questions).length;
 
 // google analytics
 const measurement_id = `G-8LLQ3459GG`;
-const secret = 'VEYF9Uh3RoqKFT0fkXcWiQ';
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', measurement_id);
-
-var client_id = '1749505231.1728876727' // default for testing purposes
 gtag('get', measurement_id, 'client_id', (id) => {
     client_id = id;
 });
+
+window.onload = function() {
+    const body = document.getElementsByTagName('body')[0];
+    const startImg = document.getElementById('start-img');
+    body.style.backgroundImage = "url(\"./img/bkg.png\")";
+    body.style.backgroundSize = `${startImg.offsetWidth}px ${startImg.offsetHeight}px`;
+}
 
 // when user hits start button -> start test
 function startTest() {
@@ -33,6 +37,8 @@ function startTest() {
     const testPage = document.getElementById('test');
     startPage.setAttribute('hidden', true);
     testPage.removeAttribute('hidden');
+    const body = document.getElementsByTagName('body')[0];
+    body.style.backgroundImage = 'none';
     populateTest();
 }
 
@@ -134,7 +140,7 @@ function showResults() {
     const text = document.getElementById('results-text');
     personality.setAttribute('src', img_id);
     text.innerText = 'you are ' + personalities[result] + '!';
-    logResults(result);
+    // logResults(result);
 }
 
 // clear results, hide results page, start test
